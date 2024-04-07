@@ -12,15 +12,26 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="script.js" type="module" defer></script>
+    <script src="deleteScript.js" type="module" defer></script>
 </head>
 
-<form id="deleteForm">
-    <input type="text" name="id" id="id" placeholder="Id">
-    <input type="submit" value="Delete Product">
-</form>
-
 <body>
-    
+    <header>
+        <h1>Delete Itemes</h1>
+        <a href="index.html"><button>Home Page</button></a>
+        <a href="adding.html"><button>Add an Item</button></a>
+    </header>
+    <input type="text" id="search" placeholder="search">
+    <select name="" id="select">
+        <option value="none">none</option>
+        <option value="low">low to high</option>
+        <option value="high">high to low</option>
+    </select>
+
+
+    <div id="container">
+
+    </div>
 </body>
+
 </html>

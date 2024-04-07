@@ -11,7 +11,6 @@ axios.get('http://localhost:3000/api/products')
 
 let addFormDetails = {}
 
-const delForm = document.querySelector('#deleteForm')
 const container = document.querySelector('#container')
 const search = document.querySelector('#search')
 const select = document.querySelector('#select')
@@ -26,24 +25,6 @@ const render = productsArr => {
 
 
 
-
-let delFormDetails = ""
-
-if(delForm){
-delForm.addEventListener('input', e => {
-    const { value } = e.target
-    delFormDetails = value
-    console.log(value)
-})
-
-delForm.addEventListener('submit', async e => {
-    e.preventDefault()
-    const result = await axios.delete(`http://localhost:3000/api/products/${delFormDetails}`,delFormDetails)
-    // form.reset()
-    delFormDetails = ""
-})
-
-}
 
 select.addEventListener('click', e => {
     const { value } = e.target //const value = e.target.value
