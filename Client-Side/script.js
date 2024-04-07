@@ -11,33 +11,11 @@ axios.get('http://localhost:3000/api/products')
 
 let addFormDetails = {}
 
-const addForm = document.querySelector('#addForm')
 const delForm = document.querySelector('#deleteForm')
 const container = document.querySelector('#container')
 const search = document.querySelector('#search')
 const select = document.querySelector('#select')
 const btn = document.querySelector('#btn')
-
-if(addForm){
-
-addForm.addEventListener('input', e => {
-    const { name, value } = e.target
-    if (name == 'price') {
-        addFormDetails[name] = Number(value)
-    } else {
-        addFormDetails[name] = value
-    }
-    console.log(addForm)
-})
-
-addForm.addEventListener('submit', async e => {
-    e.preventDefault()
-    const result = await axios.post('http://localhost:3000/api/products', addFormDetails)
-    form.reset()
-    addFormDetails = {}
-})
-}
-
 
 const render = productsArr => {
     container.innerHTML = ''
